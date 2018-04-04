@@ -3,6 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  state = { motivations: []};
+
+  componentDidMount() {
+    fetch('/motivations')
+      .then(res => res.json())
+      .then(motivations => this.setState({ motivations }));
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,6 +22,12 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+
+        <h1>Motivations</h1>
+        {this.state.motivations.map(motivation =>
+          <div key={motivation.id}>{motivation.text}</div>
+        )}
+
       </div>
     );
   }
