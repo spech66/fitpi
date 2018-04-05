@@ -4,7 +4,9 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
+    "bootstrap": "^4.0.0",
     "react": "^16.3.1",
+    "react-dazzle": "^1.4.0",
     "react-dom": "^16.3.1",
     "react-scripts": "1.1.4"
   },
@@ -12,6 +14,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "debug": "react-scripts start --inspect=12345 --debug-brk "
   }
 }
