@@ -13,9 +13,10 @@ class Motivation extends Component {
         return(
             <div className="card-body">
                 <h1>Motivations</h1>
-                {this.state.motivations.map(motivation =>
+                {/*{this.state.motivations.map(motivation =>
                     <div>{motivation.text} <em>{motivation.source}</em> {motivation.image}</div>
-                )}
+                )}*/}
+                <div>{this.state.motivations.text} <em>{this.state.motivations.source}</em> {this.state.motivations.image}</div>
             </div>
         );
     }
