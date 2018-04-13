@@ -3,7 +3,7 @@ var fs = require('fs');
 // Read files without readline+async+promises => this is a local fun project. no large files expected...
 
 exports.all = function(cb) {
-    fs.readFile("./fitpi-data/measurement.txt", 'utf8', function(err, data) {
+    fs.readFile("../fitpi-data/measurement.txt", 'utf8', function(err, data) {
         if (err) throw err;
         //console.log(data)
 
