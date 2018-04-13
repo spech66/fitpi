@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'react-dazzle/lib/style/style.css';
 import './App.css';
 
 class App extends Component {
@@ -22,10 +24,11 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>Test</p>
 
         <h1>Motivations</h1>
         {this.state.motivations.map(motivation =>
-          <div key={motivation.id}>{motivation.text}</div>
+          <div>{motivation.text} <em>{motivation.source}</em> {motivation.image}</div>
         )}
 
       </div>

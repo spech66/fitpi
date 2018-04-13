@@ -3,14 +3,45 @@
     // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
     // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [        
+    "configurations": [
         {
             "type": "node",
             "request": "launch",
-            "name": "Programm starten",
+            "name": "Launch Server",
             "program": "${workspaceFolder}\\fitpi-backend\\bin\\www"
             //"program": "${file}"
             //"program": "SET DEBUG=fitpi-backend:* & npm start"
+        },
+        /*{
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Client",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [ "run-script", "debug" ],
+            "cwd": "${workspaceRoot}\\fitpi-frontend"
+        },*/
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceRoot}\\fitpi-frontend\\src",
+            "sourceMapPathOverrides": {
+                "webpack:///src/*": "${webRoot}/*"
+            }
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Server/Client",
+            "configurations": ["Launch Server", /*"Launch Client",*/ "Launch Chrome", "Attach to Chrome"]
         }
     ]
 }
