@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "mdi-react": "^3.0.0",
     "react": "^16.3.1",
     "react-dazzle": "^1.4.0",
     "react-dom": "^16.3.1",

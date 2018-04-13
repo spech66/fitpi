@@ -1,5 +1,5 @@
 import React from 'react';
-import FontAwesomeOverlay from './FontAwesomeOverlay';
+import MdiReactOverlay from './MdiReactOverlay';
 
 const defaultBackgroundColour = '#666';
 const defaultForegroundColour = '#fff';
@@ -38,7 +38,7 @@ const SmashingFrame = ({children, settings}) => {
     return (
         <div className={`card rounded-0`} style={cardStyle}>
             <div style={style.children}>{children}</div>
-            {settings.icon ? <FontAwesomeOverlay icon={settings.icon} /> : null}
+            {settings.icon ? <MdiReactOverlay icon={settings.icon} /> : null}
         </div>
     );
 };

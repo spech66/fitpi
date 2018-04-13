@@ -18,6 +18,10 @@ body {
   padding-bottom: 15px;
 }
 
+.row {
+  padding-bottom: 15px;
+}
+
 .list-group-item {
   background-color: transparent;
 }
