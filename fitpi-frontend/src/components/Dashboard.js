@@ -7,7 +7,9 @@ import SmashingFrame from './frames/SmashingFrame';
 import Image from "./widgets/Image";
 import AlertIcon from 'mdi-react/AlertIcon';
 import BikeIcon from 'mdi-react/BikeIcon';
+import WeightKilogramIcon from 'mdi-react/WeightKilogramIcon';
 import Motivation from "./widgets/Motivation";
+import Bodyweight from "./widgets/Bodyweight";
 
 class Dashboard extends Component {
     constructor() {
@@ -22,17 +24,17 @@ class Dashboard extends Component {
                         colour: 'background',
                     }
                 },
+                WidgetBodyweight: {
+                    type: Bodyweight,
+                    title: "Bodyweight",
+                    frameSettings: {
+                        icon: <WeightKilogramIcon color="#fff" size={128} />,
+                        colour: 'foreground',
+                    }
+                },
                 WidgetMotivation: {
                     type: Motivation,
                     title: "Motivation",
-                    frameSettings: {
-                        icon: <BikeIcon color="#fff" size={128} />,
-                        colour: 'red',
-                    }
-                },
-                WidgetMotivation2: {
-                    type: Motivation,
-                    title: "Motivation 2",
                     frameSettings: {
                         icon: <AlertIcon color="#fff" size={72} />,
                         colour: 'blue',
@@ -49,11 +51,11 @@ class Dashboard extends Component {
                             },
                             {
                                 className: "col-md",
-                                widgets: [{ key: "WidgetMotivation" }]
+                                widgets: [{ key: "WidgetBodyweight" }]
                             },
                             {
                                 className: "col-md",
-                                widgets: [{ key: "WidgetMotivation2" }]
+                                widgets: [{ key: "WidgetMotivation" }]
                             },
                         ]
                     },
@@ -65,7 +67,7 @@ class Dashboard extends Component {
                             },
                             {
                                 className: "col-md",
-                                widgets: [{ key: "WidgetMotivation2" }]
+                                widgets: [{ key: "WidgetMotivation" }]
                             },
                         ]
                     }
