@@ -11,12 +11,16 @@ class Motivation extends Component {
 
     render() {
         return(
-            <div className="card-body">
-                <h1>Motivations</h1>
+            <div className="card-body text-center">
                 {/*{this.state.motivations.map(motivation =>
                     <div>{motivation.text} <em>{motivation.source}</em> {motivation.image}</div>
                 )}*/}
-                <div>{this.state.motivations.text}<br /><em>{this.state.motivations.source}</em></div>
+                <blockquote className="blockquote mb-0">
+                    <p>{this.state.motivations.text}</p>
+                    {this.state.motivations.source && <footer className="blockquote-footer">
+                        <small><cite title="Source Title">{this.state.motivations.source}</cite></small>
+                    </footer>}
+                </blockquote>
             </div>
         );
     }

@@ -4,10 +4,10 @@ import DazzleDashboard from "react-dazzle";
 import Container from "./Container";
 import SmashingFrame from './frames/SmashingFrame';
 
-import Image from "./widgets/Image";
-import AlertIcon from 'mdi-react/AlertIcon';
-import BikeIcon from 'mdi-react/BikeIcon';
+import FormatQuoteCloseIcon from 'mdi-react/FormatQuoteCloseIcon';
 import WeightKilogramIcon from 'mdi-react/WeightKilogramIcon';
+
+import Image from "./widgets/Image";
 import Motivation from "./widgets/Motivation";
 import Bodyweight from "./widgets/Bodyweight";
 
@@ -18,7 +18,7 @@ class Dashboard extends Component {
         this.state = {
             widgets: {
                 WidgetImage: { type: Image, title: "Image", frameSettings: { colour: 'invisible', } },
-                WidgetMotivation: { type: Motivation, title: "Motivation", frameSettings: { icon: <AlertIcon color="#fff" size={72} />, colour: 'blue', } },
+                WidgetMotivation: { type: Motivation, title: "Motivation", frameSettings: { icon: <FormatQuoteCloseIcon color="#fff" size={72} />, colour: 'blue', } },
                 
                 WidgetBodyweight: { type: Bodyweight, title: "Bodyweight", frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },                
                 WidgetBodyweightMonth: { type: Bodyweight, title: "Bodyweight", props: { days: 31 }, frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },
@@ -29,7 +29,6 @@ class Dashboard extends Component {
                     {
                         columns: [
                             { className: "col-md", widgets: [{ key: "WidgetImage" }] },
-                            { className: "col-md", widgets: [{ key: "WidgetMotivation" }] },
                             { className: "col-md", widgets: [{ key: "WidgetMotivation" }] },
                             { className: "col-md", widgets: [{ key: "WidgetMotivation" }] },
                         ]
