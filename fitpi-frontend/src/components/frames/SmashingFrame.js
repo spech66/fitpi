@@ -14,6 +14,8 @@ const themeTomorrowNight = {
     'aqua': '#8abeb7',
     'blue': '#81a2be',
     'purple': '#b294bb',
+    
+    'invisible': '#00000000',
 };
 
 const style = {
@@ -36,7 +38,7 @@ const SmashingFrame = ({children, settings}) => {
     });
 
     return (
-        <div className={`card rounded-0`} style={cardStyle}>
+        <div className={settings.colour !== 'invisible' ? 'card rounded-0' : 'card rounded-0 border-0'} style={cardStyle}>
             <div style={style.children}>{children}</div>
             {settings.icon ? <MdiReactOverlay icon={settings.icon} /> : null}
         </div>

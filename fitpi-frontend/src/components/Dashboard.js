@@ -17,7 +17,7 @@ class Dashboard extends Component {
 
         this.state = {
             widgets: {
-                WidgetImage: { type: Image, title: "Image", frameSettings: { colour: 'background', } },
+                WidgetImage: { type: Image, title: "Image", frameSettings: { colour: 'invisible', } },
                 WidgetMotivation: { type: Motivation, title: "Motivation", frameSettings: { icon: <AlertIcon color="#fff" size={72} />, colour: 'blue', } },
                 
                 WidgetBodyweight: { type: Bodyweight, title: "Bodyweight", frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },                
@@ -39,6 +39,7 @@ class Dashboard extends Component {
                         columns: [
                             { className: "col-md", widgets: [{ key: "WidgetBodyweight" }] },
                             { className: "col-md", widgets: [{ key: "WidgetBodyweightMonth" }] },
+                            { className: "col-md", widgets: [{ key: "WidgetBodyweightLast" }] },
                             { className: "col-md", widgets: [{ key: "WidgetBodyweightWeek" }] },
                             { className: "col-md", widgets: [{ key: "WidgetBodyweightLast" }] },
                         ]
