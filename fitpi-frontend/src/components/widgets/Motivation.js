@@ -16,7 +16,7 @@ class Motivation extends Component {
                 {/*{this.state.motivations.map(motivation =>
                     <div>{motivation.text} <em>{motivation.source}</em> {motivation.image}</div>
                 )}*/}
-                <div>{this.state.motivations.text} <em>{this.state.motivations.source}</em> {this.state.motivations.image}</div>
+                <div>{this.state.motivations.text}<br /><em>{this.state.motivations.source}</em></div>
             </div>
         );
     }

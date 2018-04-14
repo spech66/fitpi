@@ -17,58 +17,30 @@ class Dashboard extends Component {
 
         this.state = {
             widgets: {
-                WidgetImage: {
-                    type: Image,
-                    title: "Image",
-                    frameSettings: {
-                        colour: 'background',
-                    }
-                },
-                WidgetBodyweight: {
-                    type: Bodyweight,
-                    title: "Bodyweight",
-                    frameSettings: {
-                        icon: <WeightKilogramIcon color="#fff" size={128} />,
-                        colour: 'foreground',
-                    }
-                },
-                WidgetMotivation: {
-                    type: Motivation,
-                    title: "Motivation",
-                    frameSettings: {
-                        icon: <AlertIcon color="#fff" size={72} />,
-                        colour: 'blue',
-                    }
-                }
+                WidgetImage: { type: Image, title: "Image", frameSettings: { colour: 'background', } },
+                WidgetMotivation: { type: Motivation, title: "Motivation", frameSettings: { icon: <AlertIcon color="#fff" size={72} />, colour: 'blue', } },
+                
+                WidgetBodyweight: { type: Bodyweight, title: "Bodyweight", frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },                
+                WidgetBodyweightMonth: { type: Bodyweight, title: "Bodyweight", props: { days: 31 }, frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },
+                WidgetBodyweightWeek: { type: Bodyweight, title: "Bodyweight", props: { days: 7 }, frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },
+                WidgetBodyweightLast: { type: Bodyweight, title: "Bodyweight", props: { last: 5 }, frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },
             },
             layout: {
                 rows: [
                     {
                         columns: [
-                            {
-                                className: "col-md",
-                                widgets: [{ key: "WidgetImage" }]
-                            },
-                            {
-                                className: "col-md",
-                                widgets: [{ key: "WidgetBodyweight" }]
-                            },
-                            {
-                                className: "col-md",
-                                widgets: [{ key: "WidgetMotivation" }]
-                            },
+                            { className: "col-md", widgets: [{ key: "WidgetImage" }] },
+                            { className: "col-md", widgets: [{ key: "WidgetMotivation" }] },
+                            { className: "col-md", widgets: [{ key: "WidgetMotivation" }] },
+                            { className: "col-md", widgets: [{ key: "WidgetMotivation" }] },
                         ]
                     },
                     {
                         columns: [
-                            {
-                                className: "col-md",
-                                widgets: [{ key: "WidgetMotivation" }]
-                            },
-                            {
-                                className: "col-md",
-                                widgets: [{ key: "WidgetMotivation" }]
-                            },
+                            { className: "col-md", widgets: [{ key: "WidgetBodyweight" }] },
+                            { className: "col-md", widgets: [{ key: "WidgetBodyweightMonth" }] },
+                            { className: "col-md", widgets: [{ key: "WidgetBodyweightWeek" }] },
+                            { className: "col-md", widgets: [{ key: "WidgetBodyweightLast" }] },
                         ]
                     }
                 ]
