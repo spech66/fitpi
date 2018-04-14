@@ -22,7 +22,6 @@ class Dashboard extends Component {
                 
                 WidgetBodyweight: { type: Bodyweight, title: "Bodyweight", frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },                
                 WidgetBodyweightMonth: { type: Bodyweight, title: "Bodyweight", props: { days: 31 }, frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },
-                WidgetBodyweightWeek: { type: Bodyweight, title: "Bodyweight", props: { days: 7 }, frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },
                 WidgetBodyweightLast: { type: Bodyweight, title: "Bodyweight", props: { last: 5 }, frameSettings: { icon: <WeightKilogramIcon color="#fff" size={128} />, colour: 'foreground', } },
             },
             layout: {
@@ -39,8 +38,6 @@ class Dashboard extends Component {
                         columns: [
                             { className: "col-md", widgets: [{ key: "WidgetBodyweight" }] },
                             { className: "col-md", widgets: [{ key: "WidgetBodyweightMonth" }] },
-                            { className: "col-md", widgets: [{ key: "WidgetBodyweightLast" }] },
-                            { className: "col-md", widgets: [{ key: "WidgetBodyweightWeek" }] },
                             { className: "col-md", widgets: [{ key: "WidgetBodyweightLast" }] },
                         ]
                     }

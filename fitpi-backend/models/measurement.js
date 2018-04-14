@@ -5,7 +5,6 @@ var fs = require('fs');
 exports.all = function(cb) {
     fs.readFile("../fitpi-data/measurement.txt", 'utf8', function(err, data) {
         if (err) throw err;
-        //console.log(data)
 
         var list = [];
 
@@ -15,7 +14,8 @@ exports.all = function(cb) {
             text = line.split(';');
 
             item.date = text[0];
-            item.weight = text[1];
+            item.height = text[1];
+            item.weight = text[2];
 
             list.push(item);
         })
