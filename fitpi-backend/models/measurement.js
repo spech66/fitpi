@@ -9,6 +9,8 @@ exports.all = function(cb) {
         var list = [];
 
         data.toString().replace(/\r\n/g, '\n').split('\n').forEach(function (line) {
+            if(line == '' || line.startsWith('#')) return;
+
             item = {};
 
             text = line.split(';');
