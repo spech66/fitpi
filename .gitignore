@@ -62,3 +62,7 @@ typings/
 bin/
 obj/
 .vs/
+
+#fitpi
+fitpi-data/*.txt
+fitpi-data/*.csv
