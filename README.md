@@ -1,5 +1,11 @@
-# FitPi ![Logo](https://github.com/spech66/fitpi/blob/master/fitpilogo.png)
+# !!DEPRECATED!! FitPi ![Logo](https://github.com/spech66/fitpi/blob/master/fitpilogo.png)
+
 FitPi (Fitness Raspberry Pi) - Personal data collection and Dashboard for Lifelogging & Quantified self enthusiasts.
+
+**DEPRECATED in favor of:**
+
+* https://github.com/spech66/lifelogsp
+* https://github.com/spech66/lifelogspd
 
 ![Screenshot](https://github.com/spech66/fitpi/blob/master/screenshot.jpg)
 
